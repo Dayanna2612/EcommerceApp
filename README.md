@@ -1,156 +1,109 @@
-# 🛍️ App de Compras - React Native (Expo)
+# 🛍 Ecommerce App (React Native + Expo)
 
-Aplicación móvil desarrollada con **React Native y Expo** que permite a los usuarios autenticarse, visualizar productos y crear nuevos productos con carga de imágenes en la nube.
+Aplicación móvil tipo ecommerce desarrollada con **React Native y Expo**, que permite a los usuarios registrarse, iniciar sesión, ver productos, agregarlos al carrito y crear nuevos productos.
 
 ---
 
-## 🚀 Tecnologías utilizadas
+## 📱 Funcionalidades
 
-* React Native (Expo)
+* 🔐 Registro de usuarios
+* 🔑 Inicio de sesión
+* 🛍 Visualización de productos
+* ➕ Agregar productos al carrito
+* 🗑 Eliminar productos (vista local)
+* 🛒 Carrito de compras
+* 👤 Perfil de usuario editable
+* 📦 Creación de productos con imagen
+* 🎨 Diseño moderno (modo oscuro + rosado)
+
+---
+
+## 🛠 Tecnologías utilizadas
+
+* React Native
+* Expo
 * TypeScript
 * Expo Router
-* AsyncStorage (persistencia de sesión)
-* Fetch API (consumo de backend REST)
-* Cloudinary (gestión de imágenes en la nube)
-* Node.js (backend externo)
+* Expo Image Picker
+* API REST (backend externo)
 
 ---
 
-## 🔐 Autenticación
+## 🚀 Instalación y ejecución
 
-La aplicación implementa un sistema completo de autenticación:
+1. Clona el repositorio:
 
-* Registro de usuario
-* Inicio de sesión
-* Persistencia de sesión con token (AsyncStorage)
-* Manejo de roles (BUYER / ADMIN)
-
----
-
-## 📦 Funcionalidades principales
-
-### 🛒 Catálogo de productos
-
-* Visualización de productos desde API
-* Agregar productos al carrito
-* Visualización de productos creados localmente (modo demo)
-
----
-
-### ➕ Crear producto
-
-* Nombre
-* Precio
-* Descripción
-* Marca
-* Subida de imagen a Cloudinary
-* Creación de producto en backend
-* Fallback local cuando el usuario no tiene permisos (rol BUYER)
-
----
-
-### 👤 Perfil
-
-* Visualización de datos del usuario
-* Navegación a creación de productos
-* Gestión de sesión (logout)
-* Control de acceso por rol
-
----
-
-## ☁️ Gestión de imágenes (Cloudinary)
-
-Las imágenes de los productos son almacenadas y gestionadas mediante **Cloudinary**, un servicio en la nube para manejo de archivos multimedia.
-
-### Funcionalidad implementada:
-
-* Subida de imágenes desde el dispositivo móvil
-* Almacenamiento en la nube
-* Obtención de URL pública para visualizar imágenes en la app
-
-### Beneficios:
-
-* No se almacenan imágenes en el backend
-* Acceso rápido mediante URL
-* Escalabilidad y optimización automática de imágenes
-
----
-
-## ⚠️ Manejo de errores
-
-Se implementaron mecanismos para manejar errores comunes:
-
-* Validación de respuestas vacías (JSON parse error)
-* Manejo de errores de autenticación (403 - Forbidden)
-* Mensajes claros al usuario
-* Creación de productos en modo local cuando el backend restringe acceso
-
----
-
-## 📱 Diseño UI
-
-* Diseño responsivo para dispositivos móviles
-* Uso de SafeAreaView para evitar solapamiento con la barra superior
-* Componentes estilizados (inputs, botones, cards)
-* Mejora de espaciado y experiencia visual
-
----
-
-## 🧠 Arquitectura del proyecto
-
-```
-app/
- ├── index.tsx (login)
- ├── register.tsx (registro)
- ├── products.tsx (catálogo)
- ├── product-form.tsx (crear producto)
- ├── profile.tsx (perfil)
- ├── cart.tsx (carrito)
-
-services/
- ├── auth.ts
- ├── product-management.ts
- ├── products.ts
-
-utils/
- ├── encryption.ts
-
-constants/
- ├── index.ts
+```bash
+git clone https://github.com/TU-USUARIO/TU-REPO.git
 ```
 
----
+2. Entra al proyecto:
 
-## ⚙️ Instalación y ejecución
+```bash
+cd TU-REPO
+```
+
+3. Instala dependencias:
 
 ```bash
 npm install
+```
+
+4. Ejecuta la app:
+
+```bash
 npx expo start
 ```
 
 ---
 
-## 🧪 Modo demo
+## 📂 Estructura del proyecto
 
-Cuando el usuario tiene rol **BUYER**, no puede crear productos directamente en el backend.
+```
+app/
+ ├── index.tsx          # Login
+ ├── register.tsx       # Registro
+ ├── products.tsx       # Catálogo
+ ├── product-form.tsx   # Crear productos
+ ├── cart.tsx           # Carrito
+ ├── profile.tsx        # Perfil
 
-En este caso, la aplicación:
-
-* Simula la creación del producto localmente
-* Permite visualizarlo en el catálogo
-* Mantiene la experiencia funcional para pruebas
-
-
-## 🎯 Descripción general
-
-Esta aplicación fue desarrollada como parte de un proyecto académico, implementando buenas prácticas de desarrollo móvil, manejo de estado, consumo de APIs y arquitectura desacoplada.
-
-Se destacan aspectos como:
-
-* Manejo de autenticación
-* Persistencia de sesión
-* Integración con servicios cloud (Cloudinary)
-* Manejo de errores
-* Experiencia de usuario
+services/
+ ├── auth.ts
+ ├── products.ts
+ ├── product-management.ts
+```
 
 ---
+
+## 🔐 Autenticación
+
+La aplicación utiliza un sistema de autenticación basado en token, gestionado desde el backend.
+
+---
+
+## ⚠️ Notas
+
+* El carrito es manejado localmente (no persistente)
+* Algunas funciones dependen del backend (API)
+* Se requiere conexión a internet para consumir servicios
+
+---
+
+## 📸 Capturas (opcional)
+
+Puedes agregar aquí screenshots de tu app.
+
+---
+
+## 👨‍💻 Autor
+
+Proyecto desarrollado por:
+
+**Tu Nombre**
+
+---
+
+## 📄 Licencia
+
+Este proyecto es de uso académico.

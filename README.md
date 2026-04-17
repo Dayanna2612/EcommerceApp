@@ -4,6 +4,12 @@ Aplicación móvil tipo ecommerce desarrollada con **React Native y Expo**, que 
 
 ---
 
+## 🔗 Repositorio
+
+👉 https://github.com/Dayanna2612/EcommerceApp.git
+
+---
+
 ## 📱 Funcionalidades
 
 * 🔐 Registro de usuarios
@@ -34,13 +40,13 @@ Aplicación móvil tipo ecommerce desarrollada con **React Native y Expo**, que 
 1. Clona el repositorio:
 
 ```bash
-git clone https://github.com/TU-USUARIO/TU-REPO.git
+git clone https://github.com/Dayanna2612/EcommerceApp.git
 ```
 
 2. Entra al proyecto:
 
 ```bash
-cd TU-REPO
+cd EcommerceApp
 ```
 
 3. Instala dependencias:
@@ -90,17 +96,9 @@ La aplicación utiliza un sistema de autenticación basado en token, gestionado 
 
 ---
 
-## 📸 Capturas (opcional)
+## 👨‍💻 Realizado por
 
-Puedes agregar aquí screenshots de tu app.
-
----
-
-## 👨‍💻 Autor
-
-Proyecto desarrollado por:
-
-**Tu Nombre**
+**Dayanna Chavez**
 
 ---
 
